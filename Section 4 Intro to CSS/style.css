@@ -1,0 +1,126 @@
+
+html,body{
+  margin: 0px;
+  padding: 0px;
+  --dark-bg: hsl(30, 58%, 62%);
+  --red-bg: rgb(15, 216, 31);
+  --brown-bg: #D2A86B;
+  --green-bg: rgb(213, 238, 223);
+  --blue-bg: rgb(175, 220, 224);
+}
+.intro-bg{  
+  background-color: rgba(240, 240, 240, 0.973);
+  background-image: url(./background.png);
+  background-size: contain;
+  background-repeat: repeat;
+  background-blend-mode: lighten;
+
+}
+.intro{
+  color: red;
+  font-size: 24px;
+  font-weight: 800;
+  border-bottom: 1px solid rgb(240, 240, 240);
+}
+.intro a{
+  color: red;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Lobster Two';
+}
+.dark-bg{
+  background-color: var(--dark-bg);
+}
+.red-bg{
+  background-color: var(--red-bg);
+}
+.brown-bg{
+  background-color: var(--brown-bg);
+}
+.green-bg{
+  background-color: var(--green-bg);
+}
+.blue-bg{
+  background-color: var(--blue-bg);
+}
+hr {
+  border: none;
+  border-top:  dotted 5px gray;
+  width: 50vw;
+}
+.push-right{
+  margin-left: 80px;
+}
+
+
+
+
+@media only screen and (max-width: 599px){
+  body{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .flex-container .flex-item{
+    margin: auto;
+  }
+  header>h3{
+    position: relative; 
+    top: 60px;
+    color: whitesmoke;
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  header{
+    margin-top: -40px;
+    /* max-width: 30vw; */
+    /* min-width: 350px; */
+    width: 350px;
+    border-bottom: 50px solid rgb(205,11,29);
+    border-right: 100px solid transparent;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 600px){
+  .flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .flex-container *{
+    margin: auto 15px auto 15px;
+  }
+  header>h3{
+    position: relative; 
+    top: 40px;
+    color: whitesmoke;
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  header{
+    margin-top: -40px;
+    margin-left: 50px;
+    /* max-width: 30vw; */
+    /* min-width: 350px; */
+    width: 350px;
+    border-bottom: 50px solid rgb(205,11,29);
+    border-right: 100px solid transparent;
+    margin-bottom: 20px;
+  }
+}
+.flex-container-centered{
+  margin: 50px auto;
+  max-width: 750px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.flex-container-centered * {
+  margin: 0px 15px 0px 15px;
+}
