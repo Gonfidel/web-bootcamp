@@ -53,3 +53,9 @@ function createPhoneNumber(arr) {
 
     return mask;
 }
+
+
+
+// String reversal snippet
+
+const reverse=a=>[...a].map(a.pop,a);
