@@ -29,3 +29,27 @@ let colors = {
 Object.keys(colors)[0]; // returns the first property of colors
 
 Object.keys(colors)[Math.floor(Math.random()*colors.length)]; // returns a random property of colors.
+
+
+
+// Format phone number from string
+
+// SOLUTION 1
+
+function createPhoneNumber(arr) {
+    let str = arr.join('');
+    return `(${str.substring(0, 3)}) ${str.substring(3, 6)}-${str.substring(6)}`;
+}
+
+
+// SOLUTION 2
+
+function createPhoneNumber(arr) {
+    let mask = '(xxx) xxx-xxxx';
+
+    arr.forEach(item => {
+        mask = mask.replace('x', item);
+    });
+
+    return mask;
+}
