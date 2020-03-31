@@ -1,5 +1,5 @@
-const COLORS = { RED: 'red',  BLUE: 'blue',  GREEN: 'green',  YELLOW: 'yellow' }
-var { gamePattern, userPattern, level, started } = { gamePattern: [], userPattern: [], level: 0, started: false } 
+const COLORS = { RED: 'red',  BLUE: 'blue',  GREEN: 'green',  YELLOW: 'yellow' };
+var { gamePattern, userPattern, level, started } = { gamePattern: [], userPattern: [], level: 0, started: false };
 
 $(document).keypress(function() {
   if(!started){
@@ -46,3 +46,4 @@ function gameOver(){
   $(".btn").off("click");
   started = false;
 }
+

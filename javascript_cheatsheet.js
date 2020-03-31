@@ -32,6 +32,17 @@ Object.keys(colors)[Math.floor(Math.random()*colors.length)]; // returns a rando
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 // Format phone number from string
 
 // SOLUTION 1
@@ -53,6 +64,20 @@ function createPhoneNumber(arr) {
 
     return mask;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
