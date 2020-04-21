@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('../partials/head.ejs') %> 
+  <title>API's'</title>
+</head>
+<body id="particles-js">
+  
+
+    <div class="button-container">
+      <button class="round-button-left" onclick="window.location.href = '/mtg'" >MTG API</button>
+      <button class="round-button-right" onclick="window.location.href = '/pokemon'" >POKE API</button>
+    </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+
+</body>
+</html>

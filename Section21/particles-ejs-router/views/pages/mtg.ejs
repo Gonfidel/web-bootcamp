@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('../partials/head.ejs') %> 
+  <title>MTG Cards</title>
+</head>
+<body>
+
+  <%- include('../partials/header.ejs') %> 
+  <h1>MTG Cards</h1>
+
+  <div class="container-fluid">
+    <div class="row text-center">
+
+
+      <% cards.forEach(card => { %>
+
+        <% if (card.imageUrl==null) { %>
+          <% card.imageUrl = 'https://gamepedia.cursecdn.com/mtgsalvation_gamepedia/thumb/f/f8/Magic_card_back.jpg/250px-Magic_card_back.jpg?version=56c40a91c76ffdbe89867f0bc5172888' %> 
+        <% } %>
+
+        <div class="card" style="width: 18rem; margin: 0 auto;">
+          <img src="<%= card.imageUrl %>"  class="card-img-top">
+          <!-- <div class="card-body">
+            <h5 class="card-title"><%= card.name %> </h5>
+            <p class="card-text"><%= card.text %> </p>
+          </div> -->
+        </div>
+      <% }) %>
+        
+
+    </div>
+  </div>
+
+<%=  %> 
+ 
+
+
+</body>
+</html>
