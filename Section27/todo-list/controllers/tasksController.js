@@ -21,3 +21,12 @@ exports.create = (req,res) =>{
     res.redirect('/')
   });
 };
+
+exports.delete = (req,res) => {
+  console.log(req.body.checkbox)
+  Task.findByIdAndRemove(req.body.checkbox,(err,response)=>{
+    if(err) return console.log(err)
+    console.log('removed')
+    res.redirect('/')
+  });
+}

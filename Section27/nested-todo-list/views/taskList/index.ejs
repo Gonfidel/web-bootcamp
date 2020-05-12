@@ -1,0 +1,29 @@
+
+<%- include('../partials/header.ejs') %> 
+
+<div class="box" id="heading">
+  <h1> Lists </h1>
+</div>
+
+<div class="box">
+  <% lists.forEach(list => { %>
+    <div class="item"> 
+      <form action="/list/<%=list._id%>/delete" method="post">
+        <p >
+          <span class="list-item" onclick="location.href='/list/<%= list.id %>'"><%= list.name %></span>
+          <button type="submit"><i class="material-icons">delete</i></button>
+        </p>
+      </form>
+    </div>
+  <% }) %>
+
+
+  <form class="item" action="/list/create" method="post">
+    <input type="text" name="newList" placeholder="New List" autocomplete="off">
+    <button type="submit" name="button">+</button>
+  </form>
+</div>
+
+
+
+<%- include('../partials/footer.ejs') %> 

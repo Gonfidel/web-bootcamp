@@ -18,6 +18,9 @@ const userSchema = new mongoose.Schema({
 const Fruit = mongoose.model("Fruit",fruitSchema);
 const User = mongoose.model("User", userSchema);
 
+
+
+
 //Code
 const newFruit = new Fruit({name: "Mango", description: "A delicious mango. It's golden and fresh.", rating: 8});
 newFruit.save()
