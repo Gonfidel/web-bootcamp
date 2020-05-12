@@ -1,23 +1,21 @@
 {
-  "name": "todo-list",
+  "name": "articles_app_mvc",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
+    "seed": "node config/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "engines": {
-    "node": "12.10.0"
-  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-    "ejs": "^3.0.2",
+    "ejs": "^3.1.2",
     "express": "^4.17.1",
-    "mongoose": "^5.9.11",
-    "path": "^0.12.7"
+    "faker": "^4.1.0",
+    "mongoose": "^5.9.13"
   }
 }

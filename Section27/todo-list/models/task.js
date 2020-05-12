@@ -1,5 +1,4 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/section27', {useNewUrlParser: true});
+const mongoose = require('mongoose');
 
 const taskSchema = new mongoose.Schema({
   name: String

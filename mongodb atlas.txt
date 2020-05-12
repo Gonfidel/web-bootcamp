@@ -1,0 +1,1 @@
+mongo "mongodb+srv://insanes-cluster-e4qer.mongodb.net/test"  --username gonfidel
