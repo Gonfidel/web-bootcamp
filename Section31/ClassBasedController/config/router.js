@@ -17,4 +17,4 @@ router.route('/articles/:articleId')
   .patch(articlesController.update)
   .delete(articlesController.delete);
 
-module.exports = router ;
+module.exports = router;

@@ -32,7 +32,7 @@ module.exports.show = (req,res) => {
 module.exports.replace = (req,res) => {
   Article.replaceOne(
     {_id: req.params.articleId},
-    { title: req.body.title, content: req.body.content },
+    req.body,
     (err)=>{
       if(err) return res.send(err);
       res.send('Successfully replaced article.');
@@ -43,7 +43,7 @@ module.exports.replace = (req,res) => {
 module.exports.update = (req,res) => {
   Article.updateOne(
     {_id: req.params.articleId},
-    {content: req.body.content},
+    {$set: req.body},
     (err,raw)=>{
       if(err) return res.send(err);
       res.send('Successfully patched article.');

@@ -16,9 +16,9 @@ const Article = mongoose.model('Article', articleSchema);
 
 mongoose.connect('mongodb://localhost:27017/section31',{ useNewUrlParser: true, useUnifiedTopology: true });
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('public'));
+// app.use(express.static('public'));
 // app.use('/',articlesRouter);
 
 app.route('/').get((req,res)=>res.redirect('/articles'));
@@ -57,11 +57,7 @@ app.route('/articles/:articleId')
   })
   .put((req,res)=>{
     Article.replaceOne({_id: req.params.articleId},
-      {
-        title: req.body.title,
-        content: req.body.content,
-        author: req.body.author
-      },
+      req.body,
       (err,result)=>{
         if(err) return res.send(err);
         res.send('Successfully updated Article.')
@@ -69,7 +65,7 @@ app.route('/articles/:articleId')
   })
   .patch((req,res)=>{
     Article.updateOne({_id: req.params.articleId},
-      {content: req.body.content},
+      {$set: req.body},
       (err,result)=>{
         if(err) return res.send(err);
         res.send('Successfully updated Article.')
@@ -81,9 +77,6 @@ app.route('/articles/:articleId')
       res.send("Successfully delete articles.")
     })
   });
-
-
-
 
 const port = process.env.PORT != null ? process.env.PORT : 3000;
 app.listen(port,()=>{
