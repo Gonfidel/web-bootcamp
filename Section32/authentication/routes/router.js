@@ -12,4 +12,13 @@ router.route('/login')
   .get(UserController.login)
   .post(UserController.authenticate);
 
+router.route('/secret')
+  .get((req,res)=>{
+    if(req.isAuthenticated){
+      res.render('secret')
+    }else{
+      res.redirect('/login');
+    }
+  })
+
 module.exports = router;

@@ -1,0 +1,8 @@
+const r = require
+, app = r('../app')
+ 
+const port = app.locals.settings.port
+
+app.listen(port,function(){
+  console.log(`Application started on localhost:${port}`)
+})
